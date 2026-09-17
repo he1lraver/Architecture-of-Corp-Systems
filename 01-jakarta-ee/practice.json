@@ -1,0 +1,9 @@
+{
+  "number": 1,
+  "title": "Jakarta EE",
+  "httpPort": 18180,
+  "managementPort": 20090,
+  "offset": 10100,
+  "smtpPort": 11425,
+  "mailPort": 18425
+}
