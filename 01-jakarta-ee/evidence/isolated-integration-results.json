@@ -1,0 +1,58 @@
+[
+  {
+    "test": "HTML catalog responds",
+    "passed": true
+  },
+  {
+    "test": "Forms create author",
+    "passed": true
+  },
+  {
+    "test": "Forms update author",
+    "passed": true
+  },
+  {
+    "test": "Forms create book",
+    "passed": true
+  },
+  {
+    "test": "Forms forbid deleting author with books",
+    "passed": true
+  },
+  {
+    "test": "Forms update book and persist price",
+    "passed": true
+  },
+  {
+    "test": "Forms reject negative stock",
+    "passed": true
+  },
+  {
+    "test": "Forms failed edit preserves stock",
+    "passed": true
+  },
+  {
+    "test": "Forms delete book",
+    "passed": true
+  },
+  {
+    "test": "Forms delete author",
+    "passed": true
+  },
+  {
+    "test": "Forms deletions are persisted",
+    "passed": true
+  },
+  {
+    "test": "Forms reject blank author",
+    "passed": true
+  },
+  {
+    "test": "Early practice has no REST endpoint",
+    "passed": true
+  },
+  {
+    "test": "Earlier practice has no audit endpoint",
+    "passed": true
+  }
+]

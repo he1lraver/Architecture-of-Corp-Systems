@@ -1,0 +1,29 @@
+Warning! The CLI is running in a non-modular environment and cannot load commands from management extensions.
+{
+    "outcome" => "success",
+    "result" => {
+        "content" => [{"hash" => bytes {
+            0xbc, 0xcb, 0xcf, 0x05, 0x14, 0x3a, 0x23, 0xd2,
+            0xb2, 0x5b, 0x0e, 0x1e, 0x58, 0x51, 0x4b, 0x4b,
+            0xcd, 0xe9, 0xe9, 0x5d
+        }}],
+        "disabled-time" => undefined,
+        "disabled-timestamp" => undefined,
+        "enabled" => true,
+        "enabled-time" => 1789101107980L,
+        "enabled-timestamp" => "2026-09-11 08:31:47,980 SAMT",
+        "managed" => true,
+        "name" => "library.war",
+        "owner" => undefined,
+        "persistent" => true,
+        "runtime-name" => "library.war",
+        "status" => "OK",
+        "subdeployment" => undefined,
+        "subsystem" => {
+            "jpa" => undefined,
+            "undertow" => undefined,
+            "ejb3" => undefined,
+            "logging" => undefined
+        }
+    }
+}
