@@ -1,0 +1,8 @@
+body { font-family: Arial, sans-serif; max-width: 950px; margin: 30px auto; padding: 0 15px; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #aaa; padding: 8px; text-align: left; }
+label { display: block; margin: 12px 0; }
+input, select, button { padding: 5px; font: inherit; }
+input:not([type=hidden]) { width: 260px; }
+.inline { display: inline; margin-left: 10px; }
+.error { color: #a00; }
