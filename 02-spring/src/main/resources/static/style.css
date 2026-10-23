@@ -1,0 +1,8 @@
+body { font-family: Arial, sans-serif; max-width: 1100px; margin: 25px auto; padding: 0 15px; }
+form { display: flex; flex-wrap: wrap; align-items: end; gap: 10px; padding: 12px 0; border-bottom: 1px solid #ccc; }
+label { display: grid; gap: 5px; }
+input, select, button { padding: 6px; font: inherit; max-width: 100%; box-sizing: border-box; }
+input { width: 150px; }
+input[name=name], input[name=title] { width: 210px; }
+.error { color: #a00; }
+@media (max-width: 480px) { label, input, input[name=name], input[name=title], select { width: 100%; } }

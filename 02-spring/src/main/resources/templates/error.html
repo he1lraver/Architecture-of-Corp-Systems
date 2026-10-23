@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ошибка</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<h1>Не удалось выполнить действие</h1>
+<p class="error" th:text="${message}"></p>
+<a th:href="@{/}">Вернуться к библиотеке</a>
+</body>
+</html>

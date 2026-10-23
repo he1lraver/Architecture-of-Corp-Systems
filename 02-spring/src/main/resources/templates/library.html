@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Библиотека - Spring MVC</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<h1>Библиотека</h1>
+<h2>Авторы</h2>
+<form method="post" th:action="@{/authors}" th:each="author : ${authors}">
+    <input type="hidden" name="id" th:value="${author.id}">
+    <label>Имя <input name="name" required maxlength="120" th:value="${author.name}"></label>
+    <label>Страна <input name="country" required maxlength="80" th:value="${author.country}"></label>
+    <label>Год рождения <input name="birthYear" type="number" required min="1" th:value="${author.birthYear}"></label>
+    <button name="operation" value="save">Сохранить</button>
+    <button name="operation" value="delete" formnovalidate>Удалить</button>
+</form>
+<h3>Добавить автора</h3>
+<form method="post" th:action="@{/authors}">
+    <label>Имя <input name="name" required maxlength="120"></label>
+    <label>Страна <input name="country" required maxlength="80"></label>
+    <label>Год рождения <input name="birthYear" type="number" required min="1"></label>
+    <button name="operation" value="save">Добавить</button>
+</form>
+
+<h2>Книги</h2>
+<form method="post" th:action="@{/books}" th:each="book : ${books}">
+    <input type="hidden" name="id" th:value="${book.id}">
+    <label>Название <input name="title" required maxlength="160" th:value="${book.title}"></label>
+    <label>Год <input name="publishedYear" type="number" required min="1" th:value="${book.publishedYear}"></label>
+    <label>Цена <input name="price" type="number" required min="0" step="0.01" max="9999999999.99" th:value="${book.price}"></label>
+    <label>Остаток <input name="stock" type="number" required min="0" max="2147483647" th:value="${book.stock}"></label>
+    <label>Автор
+        <select name="authorId" required>
+            <option th:each="author : ${authors}" th:value="${author.id}" th:text="${author.name}"
+                    th:selected="${author.id == book.author.id}"></option>
+        </select>
+    </label>
+    <button name="operation" value="save">Сохранить</button>
+    <button name="operation" value="delete" formnovalidate>Удалить</button>
+</form>
+<h3>Добавить книгу</h3>
+<p th:if="${authors.isEmpty()}">Сначала добавьте автора.</p>
+<form method="post" th:action="@{/books}">
+    <label>Название <input name="title" required maxlength="160"></label>
+    <label>Год <input name="publishedYear" type="number" required min="1"></label>
+    <label>Цена <input name="price" type="number" required min="0" step="0.01" max="9999999999.99"></label>
+    <label>Остаток <input name="stock" type="number" required min="0" max="2147483647" value="0"></label>
+    <label>Автор
+        <select name="authorId" required>
+            <option value="">Выберите автора</option>
+            <option th:each="author : ${authors}" th:value="${author.id}" th:text="${author.name}"></option>
+        </select>
+    </label>
+    <button name="operation" value="save">Добавить</button>
+</form>
+<p>Автор с книгами не удаляется. Сначала удалите его книги или выберите для них другого автора.</p>
+</body>
+</html>
